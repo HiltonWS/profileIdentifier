@@ -42,10 +42,10 @@ async function saveFace(path, box, suffix) {
   }
   //If all params is ok, and the face are is valid try extract
   try {
-    await sharp(path).extract(region).resize(size, size).greyscale().toFile(imgPath)
+    await sharp(path).extract(region).resize(size, size).toFile(imgPath)
   //When error try resize
   } catch {
-    await sharp(path).resize(region).resize(size, size).greyscale().toFile(imgPath)
+    await sharp(path).resize(region).resize(size, size).toFile(imgPath)
   }
 }
 
